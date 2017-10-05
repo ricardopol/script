@@ -107,6 +107,7 @@ foreach ($users as $user) {
     $blogQuery->bindParam(':id', $user->id);
     $blogQuery->execute();
     $blogs = $blogQuery->fetchAll(PDO::FETCH_OBJ);
+
     foreach ($blogs as $blog) {
 
     /* 
@@ -133,6 +134,7 @@ foreach ($users as $user) {
     $commQuery->bindParam(':id', $blog->id);
     $commQuery->execute();
     $comments = $commQuery->fetchAll(PDO::FETCH_OBJ);
+
     foreach ($comments as $comment){
 
    /* 
